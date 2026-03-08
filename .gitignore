@@ -1,0 +1,10 @@
+# Environment variables
+.env
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
