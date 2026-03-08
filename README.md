@@ -2,13 +2,13 @@ Designed to help you master practical English conversations for both personal li
 
 ## Access online:
 
-[View the live website](https://rustem-garr.github.io/english-dialogues/)
+(https://rustem-garr.github.io/english-dialogues/)
 
 
 ## Project Structure
 
 ```
-english classes/
+english-dialogues/
 ├── index.html          # Main HTML file
 ├── styles.css          # All styling
 ├── app.js             # Main application logic
