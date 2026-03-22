@@ -209,7 +209,221 @@ const workplaceTopics = [
                 ]
             }
         ]
-    }
+    },
+    {
+        id: 4,
+        title: "Daily standup / DSU updates",
+        description: "Natural and professional workplace conversations for daily standups, including what you did yesterday, what you will do today, blockers, dependencies, and progress updates.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Good morning, everyone. Yesterday I continued working on the remediation task for the vulnerable containers." },
+                    { speaker: "A", text: "I reviewed the scan results, identified the affected images, and started validating which dependency updates are needed." },
+                    { speaker: "A", text: "I also did an initial round of testing to make sure the changes would not break existing functionality." },
+                    { speaker: "B", text: "Okay, sounds good. What are you planning to do today?" },
+                    { speaker: "A", text: "Today I’ll continue with the remediation work, complete the remaining updates, and run another round of regression testing." },
+                    { speaker: "A", text: "If everything looks good, I’ll prepare the changes for review and share a summary with the team." },
+                    { speaker: "B", text: "Any blockers at the moment?" },
+                    { speaker: "A", text: "No hard blockers right now. The only dependency is that I may need confirmation from the other team if one of the shared images requires a coordinated change." },
+                    { speaker: "B", text: "Got it. Please keep us posted if that becomes an issue." },
+                    { speaker: "A", text: "Will do." }
+                ],
+                vocabulary: [
+                    { text: "scan results", translation: "результаты сканирования" },
+                    { text: "regression testing", translation: "регрессионное тестирование" },
+                    { text: "hard blocker", translation: "серьезный блокер / критическое препятствие" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "Yesterday I finished the initial investigation for the ticket and went through the related service logic to understand where the issue is happening." },
+                    { speaker: "A", text: "I was able to reproduce the behavior locally, and after that I narrowed it down to one part of the request handling flow." },
+                    { speaker: "A", text: "I also documented my findings so it will be easier to explain during review." },
+                    { speaker: "B", text: "Nice progress. What’s next?" },
+                    { speaker: "A", text: "Today I’m going to implement the fix, test it locally, and then verify that the expected behavior matches the ticket requirements." },
+                    { speaker: "A", text: "If time allows, I’ll also open the PR today so the review can start early." },
+                    { speaker: "B", text: "Any blockers or risks?" },
+                    { speaker: "A", text: "No blockers at the moment. The only thing I want to double-check is whether the fix may affect one edge case, so I’ll validate that before I finalize the change." },
+                    { speaker: "B", text: "Sounds reasonable." },
+                    { speaker: "A", text: "Yes, overall it’s moving in the right direction." }
+                ],
+                vocabulary: [
+                    { text: "narrowed it down", translation: "сузил до / определил более точно" },
+                    { text: "request handling flow", translation: "поток обработки запроса" },
+                    { text: "edge case", translation: "пограничный случай" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Yesterday I spent most of the day on the dependency upgrade task." },
+                    { speaker: "A", text: "I updated the library version, reviewed the impacted files, and resolved a couple of compatibility issues in the service configuration." },
+                    { speaker: "A", text: "After that, I ran local checks and the service came up successfully, so the change looks stable so far." },
+                    { speaker: "B", text: "That’s good. What’s the plan for today?" },
+                    { speaker: "A", text: "Today I want to complete the remaining validation, especially integration-related checks, and then prepare the branch for code review." },
+                    { speaker: "A", text: "I also want to confirm whether any downstream consumers need to be notified before we merge." },
+                    { speaker: "B", text: "Any blockers?" },
+                    { speaker: "A", text: "At the moment, I’m waiting on one access-related item for a shared environment. It’s not blocking all progress, but it may slow down final validation if I don’t get it soon." },
+                    { speaker: "B", text: "Okay, so partial blocker?" },
+                    { speaker: "A", text: "Yes, I’d call it a soft blocker. I can still move forward with some tasks, but I may need help if the access is delayed much longer." }
+                ],
+                vocabulary: [
+                    { text: "compatibility issues", translation: "проблемы совместимости" },
+                    { text: "downstream consumers", translation: "зависимые downstream-сервисы / потребители" },
+                    { text: "soft blocker", translation: "частичный блокер / некритичное препятствие" }
+                ]
+            }
+        ]
+    },
+    {
+        id: 5,
+        title: "Asking for clarification on tasks",
+        description: "Natural and professional workplace conversations for clarifying task requirements, understanding scope, confirming expected behavior, and asking for acceptance criteria before starting work.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Hi Sarah, do you have a few minutes to go over the ticket with me?" },
+                    { speaker: "B", text: "Sure, what would you like to clarify?" },
+                    { speaker: "A", text: "I read through the description and comments, but I want to make sure I understand the requirement correctly before I start implementing anything." },
+                    { speaker: "B", text: "Of course. Which part is unclear?" },
+                    { speaker: "A", text: "The ticket mentions updating the behavior for failed requests, but I’m not fully sure whether we only need to change the user-facing message or if the response handling logic also needs to be adjusted on the backend." },
+                    { speaker: "B", text: "Good question. It’s not only the message. We also need to update the backend handling so the response is consistent across those scenarios." },
+                    { speaker: "A", text: "Got it. I wanted to confirm that because the current wording in the ticket made it sound more UI-focused." },
+                    { speaker: "B", text: "Yeah, that could have been written more clearly." },
+                    { speaker: "A", text: "Also, for scope - are we only addressing the specific failure case mentioned in the ticket, or should I review similar flows in the same service while I’m in there?" },
+                    { speaker: "B", text: "For this ticket, let’s keep the change limited to the case that was reported. If you notice related issues, just mention them separately." },
+                    { speaker: "A", text: "That makes sense. One more thing - do we already have acceptance criteria for this, or should I propose some based on the expected behavior?" },
+                    { speaker: "B", text: "Please propose them. That would actually be helpful." },
+                    { speaker: "A", text: "Perfect. I’ll put together a short summary of my understanding and share it before I begin implementation." }
+                ],
+                vocabulary: [
+                    { text: "go over the ticket", translation: "пройтись по задаче / обсудить тикет" },
+                    { text: "user-facing message", translation: "сообщение, видимое пользователю" },
+                    { text: "limited to", translation: "ограничено / ограничиваться" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "Hi Mike, I’m about to start working on this story, but I’d like to confirm the expected behavior first." },
+                    { speaker: "B", text: "Sure, what are you thinking?" },
+                    { speaker: "A", text: "From the description, it sounds like the service should retry the operation automatically when the downstream call times out." },
+                    { speaker: "A", text: "What I’m not sure about is whether the retry should happen for all timeout cases or only for the specific endpoint mentioned in the ticket." },
+                    { speaker: "B", text: "Only for that endpoint. We don’t want to apply the same logic globally without reviewing the impact." },
+                    { speaker: "A", text: "Okay, that’s helpful. I was also wondering how many retries are expected. I didn’t see that documented anywhere." },
+                    { speaker: "B", text: "For now, just one retry. If that still fails, the request should return the standard error response." },
+                    { speaker: "A", text: "Understood. And in terms of logging, do you want the retry attempt to be visible in the logs for troubleshooting?" },
+                    { speaker: "B", text: "Yes, definitely. That will make future investigation easier." },
+                    { speaker: "A", text: "Makes sense. Last question - should I add test coverage for both the success-after-retry case and the failure-after-retry case?" },
+                    { speaker: "B", text: "Yes, both. That would cover the acceptance criteria from my side." },
+                    { speaker: "A", text: "Great. Thanks for clarifying. I’d rather ask now than build the wrong thing and have to circle back later." },
+                    { speaker: "B", text: "Exactly. Better five minutes of questions than five hours of rework." }
+                ],
+                vocabulary: [
+                    { text: "expected behavior", translation: "ожидаемое поведение" },
+                    { text: "globally", translation: "глобально / повсюду" },
+                    { text: "circle back", translation: "вернуться к вопросу позже" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Hey John, I’m reviewing the backlog item you assigned, and I want to align on scope before I pick it up." },
+                    { speaker: "B", text: "Sure, let’s align. What’s unclear?" },
+                    { speaker: "A", text: "The ticket says we need to improve the validation flow, but it does not clearly say whether that includes only backend validation or any frontend validation messages as well." },
+                    { speaker: "B", text: "For this one, the main focus is backend validation. Frontend updates would be a separate task unless you find something critical." },
+                    { speaker: "A", text: "Okay, that helps. I also noticed there’s no explicit mention of non-happy-path behavior. Should invalid input return the same error structure we already use elsewhere, or is a different response expected here?" },
+                    { speaker: "B", text: "Use the existing error structure. We want consistency unless there’s a strong reason to change it." },
+                    { speaker: "A", text: "Understood. I just didn’t want to assume and then accidentally introduce something inconsistent." },
+                    { speaker: "B", text: "Fair point." },
+                    { speaker: "A", text: "And regarding done criteria, would you consider this complete once the validation is implemented and tested locally, or do you also want a quick demo or screenshots attached to the ticket?" },
+                    { speaker: "B", text: "Implementation, test evidence, and a short summary in the ticket should be enough." },
+                    { speaker: "A", text: "Perfect. I’ll proceed with that approach." },
+                    { speaker: "B", text: "Sounds good. Thanks for checking before jumping in." },
+                    { speaker: "A", text: "No problem. Clear requirements save everybody time." }
+                ],
+                vocabulary: [
+                    { text: "align on scope", translation: "согласовать объем задачи" },
+                    { text: "non-happy-path behavior", translation: "поведение в нестандартных / ошибочных сценариях" },
+                    { text: "test evidence", translation: "подтверждение тестирования / доказательства тестов" }
+                ]
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: "Discussing Jira / tickets / backlog items",
+        description: "Natural and professional workplace conversations for picking up tasks, discussing ticket status, asking about priority, explaining progress, and handling reassignment of backlog items.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Hi John, I was reviewing the backlog and noticed ticket TIS-142 is still unassigned. Is that one ready to be picked up?" },
+                    { speaker: "B", text: "Yes, I think so. I was actually planning to bring it up in standup this morning." },
+                    { speaker: "A", text: "Got it. I have some capacity after I finish my current task, so I wanted to check whether it makes sense for me to take it next." },
+                    { speaker: "B", text: "That should be fine. It’s a valid next item, and it’s already been prioritized for this sprint." },
+                    { speaker: "A", text: "Okay, good to know. Before I move it, I just want to confirm whether there are any dependencies or open questions that I should be aware of." },
+                    { speaker: "B", text: "There’s one dependency on the config update from another team, but you can still start the investigation and most of the implementation before that lands." },
+                    { speaker: "A", text: "That works. In that case, I’ll move it to In Progress once I wrap up my current ticket and leave a note in Jira so the status is clear." },
+                    { speaker: "B", text: "Perfect. That would help with visibility." },
+                    { speaker: "A", text: "Also, is this considered higher priority than the logging cleanup item, or should I finish that one first if both are open?" },
+                    { speaker: "B", text: "This one is higher priority. The logging cleanup is useful, but this ticket has more direct impact." },
+                    { speaker: "A", text: "Understood. I’ll treat this as the next priority, then." }
+                ],
+                vocabulary: [
+                    { text: "pick it up", translation: "взять задачу в работу" },
+                    { text: "wrap up", translation: "завершить / закончить" },
+                    { text: "visibility", translation: "прозрачность / видимость для команды" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "Hey Sarah, quick question about ticket TIS-158. I saw that it’s still in Ready, but I’ve already started working on it." },
+                    { speaker: "B", text: "Oh, thanks for pointing that out. It probably just wasn’t updated after refinement." },
+                    { speaker: "A", text: "No problem. I wanted to make sure I wasn’t missing anything before I move the status." },
+                    { speaker: "B", text: "No, you’re good. If you’ve started the work, go ahead and move it to In Progress." },
+                    { speaker: "A", text: "Okay. I’ve already completed the initial investigation and I’m now working through the implementation details." },
+                    { speaker: "B", text: "Nice. How far along do you think you are?" },
+                    { speaker: "A", text: "I’d say the investigation is done and the implementation is maybe halfway there. The main logic is clear, but I still need to validate a couple of edge cases before I’m comfortable opening a PR." },
+                    { speaker: "B", text: "That sounds reasonable." },
+                    { speaker: "A", text: "Once I update the status, I’ll also add a short Jira comment so it reflects the current progress and doesn’t look stale." },
+                    { speaker: "B", text: "Yes, please do. That helps during planning and status review." },
+                    { speaker: "A", text: "Will do. I just try to keep the ticket state aligned with reality. Jira gets creative if we leave it alone too long." },
+                    { speaker: "B", text: "That’s true. Jira always tells a story - the question is whether it’s the right one." }
+                ],
+                vocabulary: [
+                    { text: "ticket state aligned with reality", translation: "чтобы статус тикета соответствовал реальности" },
+                    { text: "stale", translation: "устаревший / давно не обновлявшийся" },
+                    { text: "edge cases", translation: "пограничные случаи" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Hi Mike, I wanted to ask about the backlog item you assigned to me last week." },
+                    { speaker: "B", text: "Sure, what about it?" },
+                    { speaker: "A", text: "I started looking into it, but after the production issue came up, I had to switch focus. I wanted to check whether you still want me to keep ownership of it or if it makes more sense to reassign it for now." },
+                    { speaker: "B", text: "That’s a fair question. I know your focus shifted because of the incident work." },
+                    { speaker: "A", text: "Yes, exactly. I don’t want the ticket to sit with me and create the impression that it’s actively moving if I can’t give it proper attention right now." },
+                    { speaker: "B", text: "I appreciate that. Let’s do this - keep ownership for now, but move it back to Blocked and add a comment explaining why progress paused." },
+                    { speaker: "A", text: "That works. I can do that. I’ve already done some initial analysis, so I’ll include that in the comment as well, in case someone else needs to pick it up later." },
+                    { speaker: "B", text: "Good idea. That way the work isn’t lost." },
+                    { speaker: "A", text: "And once the production issue settles down, I can come back to it unless priorities change." },
+                    { speaker: "B", text: "Exactly. We’ll reassess in the next planning discussion." },
+                    { speaker: "A", text: "Perfect. I’ll update the ticket accordingly." }
+                ],
+                vocabulary: [
+                    { text: "keep ownership", translation: "сохранить ответственность за задачу" },
+                    { text: "paused", translation: "приостановлен / поставлен на паузу" },
+                    { text: "reassess", translation: "пересмотреть / заново оценить" }
+                ]
+            }
+        ]
+    },
 ];
 
 window.workplaceTopics = workplaceTopics;

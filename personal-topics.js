@@ -202,6 +202,203 @@ const personalTopics = [
                 ]
             }
         ]
+    },
+    {
+        id: 4,
+        title: "Talking about your hometown or country",
+        description: "Natural conversations about where you are from, what your hometown is like, and what makes your country special.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Where are you from originally?" },
+                    { speaker: "B", text: "I am from Turkmenistan. It is a place with a strong culture and a lot of traditions." },
+                    { speaker: "A", text: "I do not know much about it, to be honest. What is it like?" },
+                    { speaker: "B", text: "It is very family-oriented, and hospitality is a big part of everyday life there." },
+                    { speaker: "A", text: "That sounds nice. I always like hearing about places where traditions still matter." },
+                    { speaker: "B", text: "Yes, that is one thing I really value about it." }
+                ],
+                vocabulary: [
+                    { text: "originally", translation: "изначально, родом" },
+                    { text: "strong culture", translation: "сильная культура" },
+                    { text: "traditions", translation: "традиции" },
+                    { text: "family-oriented", translation: "ориентированный на семью" },
+                    { text: "hospitality", translation: "гостеприимство" },
+                    { text: "everyday life", translation: "повседневная жизнь" },
+                    { text: "value", translation: "ценить" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "What do you miss most about your hometown?" },
+                    { speaker: "B", text: "Probably the familiar streets, the food, and the feeling of knowing everyone around you." },
+                    { speaker: "A", text: "Yes, that kind of comfort is hard to replace." },
+                    { speaker: "B", text: "Exactly. Even small things, like local shops or old neighbors, start to mean a lot when you are far away." },
+                    { speaker: "A", text: "It is funny how ordinary things become special once they are no longer part of your daily life." },
+                    { speaker: "B", text: "That is very true." }
+                ],
+                vocabulary: [
+                    { text: "miss most", translation: "скучать больше всего" },
+                    { text: "familiar streets", translation: "знакомые улицы" },
+                    { text: "hard to replace", translation: "трудно заменить" },
+                    { text: "far away", translation: "далеко" },
+                    { text: "ordinary things", translation: "обычные вещи" },
+                    { text: "daily life", translation: "повседневная жизнь" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "What would surprise people about your country?" },
+                    { speaker: "B", text: "Maybe how rich the culture is and how much respect people show to family and elders." },
+                    { speaker: "A", text: "That is something I really admire." },
+                    { speaker: "B", text: "Yes, those values shape a lot of how people live and interact with each other." },
+                    { speaker: "A", text: "I think that kind of foundation gives people a strong sense of identity." },
+                    { speaker: "B", text: "I agree. It stays with you no matter where you go." }
+                ],
+                vocabulary: [
+                    { text: "surprise people", translation: "удивить людей" },
+                    { text: "rich culture", translation: "богатая культура" },
+                    { text: "elders", translation: "старшие" },
+                    { text: "admire", translation: "восхищаться" },
+                    { text: "shape", translation: "формировать" },
+                    { text: "interact with each other", translation: "взаимодействовать друг с другом" },
+                    { text: "sense of identity", translation: "чувство идентичности" }
+                ]
+            }
+        ]
+    },
+    {
+        id: 5,
+        title: "Daily routine",
+        description: "Natural conversations about your usual day, morning habits, evening routines, and how you manage everyday life.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "What time do you usually wake up on weekdays?" },
+                    { speaker: "B", text: "I try to get up around six. If I sleep in, the whole morning feels rushed." },
+                    { speaker: "A", text: "I know exactly what you mean. A slow start can throw off the rest of the day." },
+                    { speaker: "B", text: "Exactly. I like having a little quiet time before everything gets busy." },
+                    { speaker: "A", text: "Same here. Even ten calm minutes in the morning can make a difference." },
+                    { speaker: "B", text: "Yes, it helps me feel more in control of the day." }
+                ],
+                vocabulary: [
+                    { text: "wake up", translation: "просыпаться" },
+                    { text: "weekdays", translation: "будние дни" },
+                    { text: "sleep in", translation: "проспать подольше" },
+                    { text: "feels rushed", translation: "ощущается в спешке" },
+                    { text: "throw off", translation: "сбить, нарушить" },
+                    { text: "quiet time", translation: "спокойное время" },
+                    { text: "in control", translation: "под контролем" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "Are you someone who plans the day in advance, or do you just go with the flow?" },
+                    { speaker: "B", text: "I usually plan the important parts ahead of time. If I do not, small tasks start taking over." },
+                    { speaker: "A", text: "That happens to me too. One small errand turns into five, and suddenly half the day is gone." },
+                    { speaker: "B", text: "Exactly. I try to write down my priorities in the morning so I do not get distracted." },
+                    { speaker: "A", text: "That is smart. It probably saves a lot of mental energy too." },
+                    { speaker: "B", text: "It does. Otherwise I spend too much time deciding what to do next." }
+                ],
+                vocabulary: [
+                    { text: "go with the flow", translation: "плыть по течению" },
+                    { text: "ahead of time", translation: "заранее" },
+                    { text: "taking over", translation: "захватывать, брать верх" },
+                    { text: "errand", translation: "дело, поручение" },
+                    { text: "priorities", translation: "приоритеты" },
+                    { text: "get distracted", translation: "отвлекаться" },
+                    { text: "mental energy", translation: "умственная энергия" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "What is your evening routine usually like?" },
+                    { speaker: "B", text: "I try to keep evenings simple. Dinner, time with family, maybe a short walk, and then I start winding down." },
+                    { speaker: "A", text: "That sounds healthy. I need a better evening routine myself." },
+                    { speaker: "B", text: "It definitely helps when I follow it. If I stay on my phone too long, I end up going to bed later than I want." },
+                    { speaker: "A", text: "That is way too familiar. Phones steal more sleep than people admit." },
+                    { speaker: "B", text: "Exactly. A calm evening makes the next morning much easier." }
+                ],
+                vocabulary: [
+                    { text: "evening routine", translation: "вечерний распорядок" },
+                    { text: "keep things simple", translation: "держать все простым" },
+                    { text: "winding down", translation: "успокаиваться, расслабляться перед сном" },
+                    { text: "follow it", translation: "придерживаться этого" },
+                    { text: "end up", translation: "в итоге" },
+                    { text: "going to bed", translation: "ложиться спать" },
+                    { text: "calm evening", translation: "спокойный вечер" }
+                ]
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: "Weekends and free time",
+        description: "Natural conversations about weekend plans, free time, relaxing, and how people like to spend time outside of work.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Do you usually plan your weekends in advance, or do you just decide as you go?" },
+                    { speaker: "B", text: "A bit of both, honestly. I like having one or two plans, but I do not want the whole weekend packed." },
+                    { speaker: "A", text: "That makes sense. If everything is scheduled, it stops feeling like a weekend." },
+                    { speaker: "B", text: "Exactly. I need at least a little unplanned time just to breathe and reset." },
+                    { speaker: "A", text: "Same here. Even a free afternoon can make the whole weekend feel better." },
+                    { speaker: "B", text: "Yes, otherwise Monday shows up and you feel like you never really rested." }
+                ],
+                vocabulary: [
+                    { text: "in advance", translation: "заранее" },
+                    { text: "as you go", translation: "по ходу дела" },
+                    { text: "packed", translation: "полностью заполненный, забитый" },
+                    { text: "unplanned time", translation: "незапланированное время" },
+                    { text: "breathe and reset", translation: "выдохнуть и перезагрузиться" },
+                    { text: "rested", translation: "отдохнувший" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "What do you like doing when you finally have some free time?" },
+                    { speaker: "B", text: "Honestly, simple things. A walk, good food, time with family, or sometimes just sitting quietly with tea." },
+                    { speaker: "A", text: "That sounds peaceful." },
+                    { speaker: "B", text: "It is. I used to think free time had to be productive, but now I value calm a lot more." },
+                    { speaker: "A", text: "That is probably healthier, to be honest." },
+                    { speaker: "B", text: "I think so too. Not every hour has to turn into a project." }
+                ],
+                vocabulary: [
+                    { text: "free time", translation: "свободное время" },
+                    { text: "sitting quietly", translation: "сидеть спокойно" },
+                    { text: "peaceful", translation: "спокойный, умиротворенный" },
+                    { text: "productive", translation: "продуктивный" },
+                    { text: "value calm", translation: "ценить спокойствие" },
+                    { text: "turn into a project", translation: "превращаться в проект" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Did you do anything interesting over the weekend?" },
+                    { speaker: "B", text: "Nothing big, but it was a good one. I cleaned up the apartment, took my son out, and got some proper rest." },
+                    { speaker: "A", text: "That still sounds like a solid weekend to me." },
+                    { speaker: "B", text: "Exactly. These days, a calm weekend feels more valuable than an exciting one." },
+                    { speaker: "A", text: "I get that. Sometimes peace is better than entertainment." },
+                    { speaker: "B", text: "Absolutely. The older I get, the more I appreciate quiet weekends." }
+                ],
+                vocabulary: [
+                    { text: "interesting", translation: "интересное" },
+                    { text: "cleaned up", translation: "прибрался" },
+                    { text: "proper rest", translation: "полноценный отдых" },
+                    { text: "solid weekend", translation: "хорошие, добротные выходные" },
+                    { text: "valuable", translation: "ценный" },
+                    { text: "quiet weekends", translation: "спокойные выходные" }
+                ]
+            }
+        ]
     }
 ]
 
