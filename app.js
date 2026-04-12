@@ -127,13 +127,6 @@ function renderCategory(container) {
 }
 
 function renderKidsCategory(container, topics) {
-  const allFlashcards = topics.flatMap(topic =>
-    (topic.flashcards || []).map(card => ({
-      ...card,
-      topic: topic.title
-    }))
-  );
-
   container.innerHTML = `
     <div class="container">
       <div class="category-page kids-category-page">
@@ -141,33 +134,35 @@ function renderKidsCategory(container, topics) {
 
         <div class="category-header">
           <h1>English for Kids</h1>
-          <p class="kids-category-description">Tap any card to flip and see the example response.</p>
         </div>
 
-        <div class="flashcards-grid">
-          ${allFlashcards.map((flashcard, idx) => `
-            <div class="flashcard-container" onclick="flipCard(this)">
-              <div class="flashcard">
-                <div class="flashcard-front">
-                  <div class="flashcard-content">
-                    <p class="flashcard-topic">${flashcard.topic}</p>
-                    <p class="flashcard-label">Question</p>
-                    <p class="flashcard-text">${flashcard.question}</p>
+        ${topics.map(topic => `
+          <div class="kids-topic-section">
+            <h2 class="kids-topic-title">${topic.title}</h2>
+            <div class="flashcards-grid">
+              ${(topic.flashcards || []).map((flashcard, idx) => `
+                <div class="flashcard-container" onclick="flipCard(this)">
+                  <div class="flashcard">
+                    <div class="flashcard-front">
+                      <div class="flashcard-content">
+                        <p class="flashcard-label">Question</p>
+                        <p class="flashcard-text">${flashcard.question}</p>
+                      </div>
+                      <p class="flip-hint">Tap to reveal answer</p>
+                    </div>
+                    <div class="flashcard-back">
+                      <div class="flashcard-content">
+                        <p class="flashcard-label">Answer</p>
+                        <p class="flashcard-text">${flashcard.answer}</p>
+                      </div>
+                      <p class="flip-hint">Tap to reveal question</p>
+                    </div>
                   </div>
-                  <p class="flip-hint">Tap to reveal answer</p>
                 </div>
-                <div class="flashcard-back">
-                  <div class="flashcard-content">
-                    <p class="flashcard-topic">${flashcard.topic}</p>
-                    <p class="flashcard-label">Answer</p>
-                    <p class="flashcard-text">${flashcard.answer}</p>
-                  </div>
-                  <p class="flip-hint">Tap to reveal question</p>
-                </div>
-              </div>
+              `).join('')}
             </div>
-          `).join('')}
-        </div>
+          </div>
+        `).join('')}
       </div>
     </div>
   `;
