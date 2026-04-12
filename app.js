@@ -15,6 +15,8 @@ function getTopics(category) {
     return window.personalTopics || [];
   } else if (category === 'workplace') {
     return window.workplaceTopics || [];
+  } else if (category === 'kids') {
+    return window.kidsTopics || [];
   }
   return [];
 }
@@ -49,6 +51,9 @@ function renderHome(container) {
         <button class="category-btn workplace-btn" onclick="goToCategory('workplace')">
           Workplace English
         </button>
+        <button class="category-btn kids-btn" onclick="goToCategory('kids')">
+          English for Kids
+        </button>
       </div>
       
       <div class="footer-text">
@@ -60,7 +65,15 @@ function renderHome(container) {
 
 function renderCategory(container) {
   const topics = getTopics(state.selectedCategory);
-  const categoryTitle = state.selectedCategory === 'personal' ? 'Personal Life English' : 'Workplace English';
+  let categoryTitle = 'English Learning';
+  
+  if (state.selectedCategory === 'personal') {
+    categoryTitle = 'Personal Life English';
+  } else if (state.selectedCategory === 'workplace') {
+    categoryTitle = 'Workplace English';
+  } else if (state.selectedCategory === 'kids') {
+    categoryTitle = 'English for Kids';
+  }
   
   // Filter topics by search query
   let filteredTopics = topics;
@@ -98,7 +111,7 @@ function renderCategory(container) {
               <div class="topic-card" onclick="selectTopic(${topics.indexOf(topic)})">
                 <h3>${topic.title}</h3>
                 <p>${topic.description}</p>
-                <span class="example-count">${topic.examples.length} examples</span>
+                <span class="example-count">${state.selectedCategory === 'kids' ? topic.flashcards.length + ' flashcards' : topic.examples.length + ' examples'}</span>
               </div>
             `).join('')}
           </div>
@@ -111,6 +124,50 @@ function renderCategory(container) {
 function renderTopicDetail(container) {
   const topics = getTopics(state.selectedCategory);
   const topic = topics[state.selectedTopicIndex];
+  
+  // Check if this is a kids flashcard topic
+  if (state.selectedCategory === 'kids' && topic.flashcards) {
+    renderFlashcards(container, topic);
+  } else {
+    renderDialogueDetail(container, topic);
+  }
+}
+
+function renderFlashcards(container, topic) {
+  container.innerHTML = `
+    <div class="container">
+      <div class="flashcard-page">
+        <button class="detail-back-button" onclick="goToCategory('${state.selectedCategory}')">← Back to Topics</button>
+        <h1>${topic.title}</h1>
+        
+        <div class="flashcards-grid">
+          ${topic.flashcards.map((flashcard, idx) => `
+            <div class="flashcard-container" onclick="flipCard(this)">
+              <div class="flashcard">
+                <div class="flashcard-front">
+                  <div class="flashcard-content">
+                    <p class="flashcard-label">Question</p>
+                    <p class="flashcard-text">${flashcard.question}</p>
+                  </div>
+                  <p class="flip-hint">Click to reveal answer</p>
+                </div>
+                <div class="flashcard-back">
+                  <div class="flashcard-content">
+                    <p class="flashcard-label">Answer</p>
+                    <p class="flashcard-text">${flashcard.answer}</p>
+                  </div>
+                  <p class="flip-hint">Click to reveal question</p>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderDialogueDetail(container, topic) {
   const example = topic.examples[state.selectedExampleIndex];
   
   const exampleNumber = `${state.selectedTopicIndex + 1}.${state.selectedExampleIndex + 1}`;
@@ -291,6 +348,10 @@ function previousExample() {
     // Scroll to top
     document.querySelector('.topic-detail-page').scrollIntoView({ behavior: 'smooth' });
   }
+}
+
+function flipCard(element) {
+  element.classList.toggle('flipped');
 }
 
 // ============ Utility Functions ============
