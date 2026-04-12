@@ -170,7 +170,7 @@ button:focus {
   border-color: #3498db;
 }
 
-.category-header {
+..category-header {
   text-align: center;
   margin-bottom: 50px;
 }
@@ -180,6 +180,14 @@ button:focus {
   color: #1a1a1a;
   margin-bottom: 15px;
   font-weight: 700;
+}
+
+.kids-category-description {
+  color: #5a5a5a;
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 .search-box {

@@ -74,6 +74,11 @@ function renderCategory(container) {
   } else if (state.selectedCategory === 'kids') {
     categoryTitle = 'English for Kids';
   }
+
+  if (state.selectedCategory === 'kids') {
+    renderKidsCategory(container, topics);
+    return;
+  }
   
   // Filter topics by search query
   let filteredTopics = topics;
@@ -116,6 +121,53 @@ function renderCategory(container) {
             `).join('')}
           </div>
         `}
+      </div>
+    </div>
+  `;
+}
+
+function renderKidsCategory(container, topics) {
+  const allFlashcards = topics.flatMap(topic =>
+    (topic.flashcards || []).map(card => ({
+      ...card,
+      topic: topic.title
+    }))
+  );
+
+  container.innerHTML = `
+    <div class="container">
+      <div class="category-page kids-category-page">
+        <button class="back-button" onclick="goHome()">← Back to Home</button>
+
+        <div class="category-header">
+          <h1>English for Kids</h1>
+          <p class="kids-category-description">Tap any card to flip and see the example response.</p>
+        </div>
+
+        <div class="flashcards-grid">
+          ${allFlashcards.map((flashcard, idx) => `
+            <div class="flashcard-container" onclick="flipCard(this)">
+              <div class="flashcard">
+                <div class="flashcard-front">
+                  <div class="flashcard-content">
+                    <p class="flashcard-topic">${flashcard.topic}</p>
+                    <p class="flashcard-label">Question</p>
+                    <p class="flashcard-text">${flashcard.question}</p>
+                  </div>
+                  <p class="flip-hint">Tap to reveal answer</p>
+                </div>
+                <div class="flashcard-back">
+                  <div class="flashcard-content">
+                    <p class="flashcard-topic">${flashcard.topic}</p>
+                    <p class="flashcard-label">Answer</p>
+                    <p class="flashcard-text">${flashcard.answer}</p>
+                  </div>
+                  <p class="flip-hint">Tap to reveal question</p>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
       </div>
     </div>
   `;
