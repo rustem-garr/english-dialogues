@@ -52,7 +52,7 @@ function renderHome(container) {
           Workplace English
         </button>
         <button class="category-btn kids-btn" onclick="goToCategory('kids')">
-          English for Kids
+          Flashcards for Davut
         </button>
       </div>
       
@@ -133,7 +133,7 @@ function renderKidsCategory(container, topics) {
         <button class="back-button" onclick="goHome()">← Back to Home</button>
 
         <div class="category-header">
-          <h1>English for Kids</h1>
+          <h1>Flashcards for Davut</h1>
         </div>
 
         ${topics.map(topic => `
