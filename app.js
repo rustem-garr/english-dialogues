@@ -12,11 +12,11 @@ const state = {
 
 function getTopics(category) {
   if (category === 'personal') {
-    return window.personalTopics || [];
+    return typeof personalTopics !== 'undefined' ? personalTopics : (window.personalTopics || []);
   } else if (category === 'workplace') {
-    return window.workplaceTopics || [];
+    return typeof workplaceTopics !== 'undefined' ? workplaceTopics : (window.workplaceTopics || []);
   } else if (category === 'kids') {
-    return window.kidsTopics || [];
+    return typeof kidsTopics !== 'undefined' ? kidsTopics : (window.kidsTopics || []);
   }
   return [];
 }
