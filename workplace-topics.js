@@ -424,6 +424,224 @@ const workplaceTopics = [
             }
         ]
     },
+    {
+        id: 7,
+        title: "Talking about blockers",
+        description: "Natural and professional workplace conversations for explaining blockers such as access issues, approvals, dependencies, unclear requirements, environment problems, and deployment issues.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Hi John, I wanted to give you a quick update on the task. I’ve made progress on the implementation, but I’m currently blocked on access to the shared test environment." },
+                    { speaker: "B", text: "Okay, what exactly are you missing?" },
+                    { speaker: "A", text: "I can complete the code changes locally, but I can’t run the final validation in the environment because I still don’t have the required permissions." },
+                    { speaker: "B", text: "Did you already submit the access request?" },
+                    { speaker: "A", text: "Yes, I submitted it yesterday and followed up this morning. At this point I’m waiting for approval from the platform team." },
+                    { speaker: "B", text: "Got it. Is it blocking all progress or just the final part?" },
+                    { speaker: "A", text: "Mostly the final part. I can still continue with local testing and clean up the branch, but I won’t be able to fully verify the change until the access comes through." },
+                    { speaker: "B", text: "That makes sense. Please keep the ticket updated so it’s clear why it’s not moving to review yet." },
+                    { speaker: "A", text: "Will do. I’ll add a note that the implementation is in good shape and the remaining blocker is environment access." },
+                    { speaker: "B", text: "Perfect. If the approval is delayed, let me know and I can help escalate." },
+                    { speaker: "A", text: "I appreciate that. I’ll monitor it today and reach out if it stays stuck." }
+                ],
+                vocabulary: [
+                    { text: "shared test environment", translation: "общая тестовая среда" },
+                    { text: "required permissions", translation: "необходимые разрешения / права доступа" },
+                    { text: "help escalate", translation: "помочь с эскалацией" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "Hey Sarah, just to flag it early, I’ve hit a blocker on the ticket." },
+                    { speaker: "B", text: "Thanks for mentioning it. What’s the issue?" },
+                    { speaker: "A", text: "The requirements are still a bit unclear, especially around the expected behavior for invalid input. I reviewed the ticket and comments, but there’s not enough detail for me to implement it confidently." },
+                    { speaker: "B", text: "Is the uncertainty mostly around validation rules or the response we return?" },
+                    { speaker: "A", text: "Both, actually. I can make assumptions, but I’d rather not do that and risk building the wrong behavior." },
+                    { speaker: "B", text: "That’s fair. Did you already reach out to the product owner?" },
+                    { speaker: "A", text: "Not yet. I wanted to sync with you first to make sure I wasn’t missing any existing documentation or prior discussion." },
+                    { speaker: "B", text: "No, I think you’re right. The ticket is too vague as it stands." },
+                    { speaker: "A", text: "Okay, that helps. In that case, I’ll leave a comment with the open questions and ask for clarification before I move further." },
+                    { speaker: "B", text: "Yes, that’s the right move." },
+                    { speaker: "A", text: "Until then, I can still work on related cleanup tasks, so I won’t be completely idle." },
+                    { speaker: "B", text: "Good approach. That keeps things moving without guessing." }
+                ],
+                vocabulary: [
+                    { text: "flag it early", translation: "заранее сообщить / поднять вопрос заранее" },
+                    { text: "too vague", translation: "слишком расплывчато / неясно" },
+                    { text: "open questions", translation: "открытые вопросы" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Hi Mike, I wanted to mention a blocker on my side related to deployment." },
+                    { speaker: "B", text: "Sure, what happened?" },
+                    { speaker: "A", text: "The code changes are ready, and local testing looks good, but I’m unable to move forward because the pipeline is currently failing before it reaches the deployment stage." },
+                    { speaker: "B", text: "Is the failure related to your changes?" },
+                    { speaker: "A", text: "From what I can tell, no. The failure seems to be coming from a pre-existing issue in the CI process. I reran it to confirm, and the error is the same." },
+                    { speaker: "B", text: "Okay, so it’s more of an infrastructure or pipeline problem." },
+                    { speaker: "A", text: "Exactly. I’ve reviewed the logs, and nothing points directly to my branch. At this point, I’m blocked from getting a clean build even though the task itself is ready for the next step." },
+                    { speaker: "B", text: "Did you post the error details anywhere?" },
+                    { speaker: "A", text: "Yes, I shared the failure summary in the team channel and added a note to the ticket so the status is visible." },
+                    { speaker: "B", text: "Good. While that’s being investigated, is there anything else you can move forward on?" },
+                    { speaker: "A", text: "I can still prepare the PR notes, clean up the documentation, and double-check test coverage. But the actual deployment path is blocked until the pipeline issue is resolved." },
+                    { speaker: "B", text: "Understood. Thanks for surfacing it quickly." },
+                    { speaker: "A", text: "Of course. Better to raise it early than let the ticket look mysteriously stuck." }
+                ],
+                vocabulary: [
+                    { text: "pre-existing issue", translation: "уже существующая проблема" },
+                    { text: "clean build", translation: "успешная сборка без ошибок" },
+                    { text: "surfacing it quickly", translation: "быстро вынести проблему на поверхность / быстро сообщить" }
+                ]
+            }
+        ]
+    },
+    {
+        id: 8,
+        title: "Asking technical questions professionally",
+        description: "Natural and professional workplace conversations for asking technical questions about service behavior, implementation details, branches, testing, and bug reproduction.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Hi Sarah, do you have a few minutes for a technical question about this service?" },
+                    { speaker: "B", text: "Sure, what are you trying to understand?" },
+                    { speaker: "A", text: "I’m tracing the request flow, and I want to confirm where the main business logic actually lives." },
+                    { speaker: "A", text: "At first glance, it looks like the controller is pretty thin, but I’m not fully sure whether the validation and transformation happen in the service layer or inside the downstream client." },
+                    { speaker: "B", text: "Most of the business logic is in the service layer. The controller mainly handles the request and response mapping." },
+                    { speaker: "A", text: "That helps. I noticed a couple of helper classes too, so I wasn’t sure whether some of that behavior had been split out over time." },
+                    { speaker: "B", text: "Yes, some of it has. The validation is in the service, but the payload transformation is partly handled by those helpers." },
+                    { speaker: "A", text: "Got it. I just wanted to make sure I was looking in the right place before spending too much time digging through the wrong path." },
+                    { speaker: "B", text: "That makes sense. The codebase has a few historical layers, so the first read can be a little misleading." },
+                    { speaker: "A", text: "I figured that might be the case. Thanks for confirming - now I know where to focus." }
+                ],
+                vocabulary: [
+                    { text: "trace the request flow", translation: "проследить поток запроса" },
+                    { text: "service layer", translation: "слой сервиса / сервисный слой" },
+                    { text: "historical layers", translation: "исторически сложившиеся слои / старые архитектурные наслоения" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "Hey Mike, quick question before I start testing this change. Which branch should I be using as the base?" },
+                    { speaker: "B", text: "For this one, use the release branch. We’re trying to keep the fix isolated from the other in-progress work." },
+                    { speaker: "A", text: "Okay, that’s what I suspected, but I wanted to confirm before I branch off the wrong target and create extra cleanup later." },
+                    { speaker: "B", text: "Good call. If you use develop here, you’ll pull in changes that are unrelated to the fix." },
+                    { speaker: "A", text: "Understood. And once the change is ready, do you want me to open the PR directly against the release branch as well?" },
+                    { speaker: "B", text: "Yes, exactly. Keep the whole path consistent." },
+                    { speaker: "A", text: "Makes sense. Also, for testing - should I validate only the reported issue, or do you want broader regression coverage around the same flow?" },
+                    { speaker: "B", text: "Please do both. Confirm the specific fix, but also test the nearby scenarios so we don’t accidentally break something related." },
+                    { speaker: "A", text: "Got it. I’ll keep the branch targeted, and I’ll make sure the testing covers both the main case and the adjacent flows." },
+                    { speaker: "B", text: "Perfect. That’s the safest approach." }
+                ],
+                vocabulary: [
+                    { text: "branch off", translation: "ответвиться / создать ветку от" },
+                    { text: "target", translation: "целевая ветка / цель" },
+                    { text: "adjacent flows", translation: "смежные сценарии / соседние потоки" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Hi John, I’m trying to reproduce the bug from the ticket, but I want to make sure I’m using the right setup." },
+                    { speaker: "B", text: "What part is unclear?" },
+                    { speaker: "A", text: "The ticket says the issue happens when the downstream service returns an unexpected response, but it doesn’t say whether that was observed in dev, test, or production." },
+                    { speaker: "A", text: "I can simulate part of it locally, but I’m not sure if that will match the real conditions closely enough." },
+                    { speaker: "B", text: "The original issue was seen in test, not production. The payload was slightly different from what we usually expect." },
+                    { speaker: "A", text: "That explains why I wasn’t seeing the same behavior locally with the default sample data." },
+                    { speaker: "B", text: "Yes, the bug is tied to a specific response shape." },
+                    { speaker: "A", text: "Do we already have an example payload or logs I can use to reproduce it more accurately?" },
+                    { speaker: "B", text: "There should be a log snippet attached in the incident thread. I can send it to you." },
+                    { speaker: "A", text: "That would be great. Once I have that, I can reproduce the case properly and verify the fix with more confidence." },
+                    { speaker: "B", text: "I’ll send it over in a minute." },
+                    { speaker: "A", text: "Perfect. Thank you. I’d rather reproduce the real issue than solve an imaginary one and call it progress." }
+                ],
+                vocabulary: [
+                    { text: "real conditions", translation: "реальные условия" },
+                    { text: "response shape", translation: "структура ответа" },
+                    { text: "log snippet", translation: "фрагмент лога" }
+                ]
+            }
+        ]
+    },
+    {
+        id: 9,
+        title: "Explaining your technical work",
+        description: "Natural and professional workplace conversations for explaining bug fixes, feature development, refactoring, dependency upgrades, remediation work, API changes, and database updates.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Hi team, I wanted to give a quick overview of the bug fix I completed." },
+                    { speaker: "B", text: "Sure, go ahead." },
+                    { speaker: "A", text: "The issue was happening because the service was not handling one of the downstream error responses correctly." },
+                    { speaker: "A", text: "In the current flow, that response was being treated like a valid payload, which caused the application to continue with incomplete data and eventually fail later in the process." },
+                    { speaker: "B", text: "So the actual problem was not at the point of failure, but earlier in the request flow?" },
+                    { speaker: "A", text: "Exactly. The visible failure happened later, but the root cause was the missing validation when the downstream response first came back." },
+                    { speaker: "A", text: "I updated the handling logic so we now validate that response earlier, and if the data is not in the expected format, we return a controlled error instead of letting the request continue in a bad state." },
+                    { speaker: "B", text: "That makes sense. Did the fix require any API changes?" },
+                    { speaker: "A", text: "No external API contract changes. The behavior is improved internally, but from the caller’s perspective the interface stays the same." },
+                    { speaker: "B", text: "Nice. What did you do for testing?" },
+                    { speaker: "A", text: "I reproduced the issue locally, verified the fix for the failing case, and also tested the normal success path to make sure the change did not introduce side effects." },
+                    { speaker: "B", text: "Sounds solid." },
+                    { speaker: "A", text: "Yes, I tried to keep the fix targeted. No heroics, just removing the landmine." }
+                ],
+                vocabulary: [
+                    { text: "root cause", translation: "корневая причина" },
+                    { text: "controlled error", translation: "контролируемая ошибка / управляемый ответ с ошибкой" },
+                    { text: "side effects", translation: "побочные эффекты" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "I can walk you through the dependency upgrade work if that would be helpful." },
+                    { speaker: "B", text: "Yes, please. What changed?" },
+                    { speaker: "A", text: "The main goal was to upgrade a vulnerable library version that had been flagged in the scan results." },
+                    { speaker: "A", text: "At first, it looked like a simple version bump, but once I made the update, I found a couple of compatibility issues in how the service was initializing one of the components." },
+                    { speaker: "B", text: "Was that due to breaking changes in the new version?" },
+                    { speaker: "A", text: "Yes, mostly. A few methods were still available, but the expected behavior had changed enough that our existing configuration was no longer safe to keep as-is." },
+                    { speaker: "B", text: "So what did you end up changing besides the version?" },
+                    { speaker: "A", text: "I updated the dependency, adjusted the related configuration, and cleaned up one small section of code that was relying on the old behavior." },
+                    { speaker: "A", text: "I also reviewed the startup logs and ran local validation to make sure the service still boots cleanly and behaves as expected." },
+                    { speaker: "B", text: "Did you have to refactor much?" },
+                    { speaker: "A", text: "Not a full refactor, but I did make a few small changes to keep the code aligned with the newer library usage pattern." },
+                    { speaker: "B", text: "That sounds good. It’s better to make those adjustments now than carry technical debt forward." },
+                    { speaker: "A", text: "Exactly. If we ignore those details during an upgrade, the code smiles during build time and complains in production." }
+                ],
+                vocabulary: [
+                    { text: "version bump", translation: "повышение версии / обновление версии" },
+                    { text: "breaking changes", translation: "ломающие изменения / несовместимые изменения" },
+                    { text: "technical debt", translation: "технический долг" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Let me summarize the work I’ve been doing on this feature." },
+                    { speaker: "B", text: "Sure." },
+                    { speaker: "A", text: "The feature required changes in three places: the API layer, part of the service logic, and the database mapping." },
+                    { speaker: "A", text: "On the API side, I added support for the new request field and updated the validation so the input is checked before it reaches the main business flow." },
+                    { speaker: "A", text: "In the service layer, I added the logic needed to process that field and make sure it is included in the decision path where appropriate." },
+                    { speaker: "B", text: "And what about the database side?" },
+                    { speaker: "A", text: "There was a small schema-related update needed so the value could be stored and retrieved consistently. I also updated the mapping code so the data flow stays aligned end to end." },
+                    { speaker: "B", text: "Was the change isolated, or does it affect any existing clients?" },
+                    { speaker: "A", text: "It should be backward compatible. Existing clients can continue sending the same payload as before, and the new field is optional." },
+                    { speaker: "B", text: "That’s good. Did you have to touch any older code while doing this?" },
+                    { speaker: "A", text: "Yes, a little. I cleaned up one section while I was there because the original code was doing too much in one method, so I split it into smaller pieces to make the logic easier to follow and test." },
+                    { speaker: "B", text: "So part feature work, part refactoring?" },
+                    { speaker: "A", text: "Exactly. I tried not to overdo it, but if I’m already in the kitchen, I at least want to stop the stove from smoking." }
+                ],
+                vocabulary: [
+                    { text: "backward compatible", translation: "обратно совместимый" },
+                    { text: "schema-related update", translation: "обновление, связанное со схемой" },
+                    { text: "data flow", translation: "поток данных" }
+                ]
+            }
+        ]
+    },
 ];
 
 window.workplaceTopics = workplaceTopics;

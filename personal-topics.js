@@ -399,6 +399,207 @@ const personalTopics = [
                 ]
             }
         ]
+    },
+    {
+        id: 7,
+        title: "Hobbies and interests",
+        description: "Natural conversations about what you enjoy doing in your spare time, what keeps you interested, and how hobbies fit into everyday life.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Do you have any hobbies that help you relax?" },
+                    { speaker: "B", text: "Yes, I do. I really enjoy reading and cooking. Both of them help me slow down after a busy day." },
+                    { speaker: "A", text: "That is a good combination. One feeds your mind, and the other feeds everyone else." },
+                    { speaker: "B", text: "Exactly. Cooking especially helps me reset. When I focus on the food, I stop thinking about everything else for a while." },
+                    { speaker: "A", text: "I get that. A good hobby gives your brain a break without making you feel like you are wasting time." },
+                    { speaker: "B", text: "Yes, that is exactly why I value it." }
+                ],
+                vocabulary: [
+                    { text: "hobbies", translation: "хобби" },
+                    { text: "help you relax", translation: "помогают тебе расслабиться" },
+                    { text: "slow down", translation: "замедлиться" },
+                    { text: "busy day", translation: "напряженный день" },
+                    { text: "reset", translation: "перезагрузиться" },
+                    { text: "gives your brain a break", translation: "дает мозгу передышку" },
+                    { text: "value it", translation: "ценить это" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "What have you been into lately?" },
+                    { speaker: "B", text: "Lately I have been spending more time on fitness and language learning." },
+                    { speaker: "A", text: "That sounds productive. Do you actually enjoy it, or is it more about discipline?" },
+                    { speaker: "B", text: "A bit of both, honestly. Some days I feel motivated, and other days I just rely on routine." },
+                    { speaker: "A", text: "That is probably the more realistic approach anyway." },
+                    { speaker: "B", text: "Exactly. If I wait for motivation every time, I will not stay consistent." }
+                ],
+                vocabulary: [
+                    { text: "been into lately", translation: "увлекался в последнее время" },
+                    { text: "fitness", translation: "фитнес" },
+                    { text: "language learning", translation: "изучение языков" },
+                    { text: "discipline", translation: "дисциплина" },
+                    { text: "rely on routine", translation: "полагаться на распорядок" },
+                    { text: "realistic approach", translation: "реалистичный подход" },
+                    { text: "stay consistent", translation: "оставаться последовательным" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Have you always had the same interests, or have they changed over time?" },
+                    { speaker: "B", text: "They have definitely changed. Some hobbies stayed with me, but others came and went depending on the season of life." },
+                    { speaker: "A", text: "That makes sense. People change, so it is natural for interests to change too." },
+                    { speaker: "B", text: "Exactly. These days I care less about what looks impressive and more about what genuinely adds value to my life." },
+                    { speaker: "A", text: "I like that way of thinking." },
+                    { speaker: "B", text: "Yes, it makes hobbies feel more personal and less like something you do just to keep up with other people." }
+                ],
+                vocabulary: [
+                    { text: "changed over time", translation: "изменились со временем" },
+                    { text: "came and went", translation: "появлялись и исчезали" },
+                    { text: "season of life", translation: "этап жизни" },
+                    { text: "genuinely", translation: "по-настоящему" },
+                    { text: "adds value", translation: "приносит пользу" },
+                    { text: "personal", translation: "личный" },
+                    { text: "keep up with other people", translation: "не отставать от других людей" }
+                ]
+            }
+        ]
+    },
+    {
+        id: 8,
+        title: "Food and cooking",
+        description: "Natural conversations about meals, cooking at home, favorite dishes, and everyday food habits.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Do you actually enjoy cooking, or do you do it mostly because you have to?" },
+                    { speaker: "B", text: "Honestly, I really enjoy it. For me, cooking is not just about food. It is also a way to relax and slow down a little." },
+                    { speaker: "A", text: "I get that. Some people find peace in the kitchen, and some people just find dirty dishes." },
+                    { speaker: "B", text: "That is true. I do not always feel excited about cleanup, but I like the process of making something from scratch." },
+                    { speaker: "A", text: "What do you usually like to cook?" },
+                    { speaker: "B", text: "Simple meals most of the time - rice, meat, soups, pasta, things that are filling and practical for everyday life." }
+                ],
+                vocabulary: [
+                    { text: "enjoy cooking", translation: "любить готовить" },
+                    { text: "slow down", translation: "замедлиться" },
+                    { text: "find peace", translation: "находить спокойствие" },
+                    { text: "cleanup", translation: "уборка после готовки" },
+                    { text: "from scratch", translation: "с нуля" },
+                    { text: "filling", translation: "сытный" },
+                    { text: "practical", translation: "практичный" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "What is your favorite thing to make when you have a little extra time?" },
+                    { speaker: "B", text: "If I have time, I like making something homemade that takes a bit more effort. It feels more rewarding when you are not rushing." },
+                    { speaker: "A", text: "Yes, that makes sense. Food tastes better when you are not cooking in a hurry after a long day." },
+                    { speaker: "B", text: "Exactly. On busy weekdays I just want something quick and reliable, but on weekends I can enjoy the process more." },
+                    { speaker: "A", text: "That is probably the best balance." },
+                    { speaker: "B", text: "I think so too. Everyday cooking should be realistic, not a performance." }
+                ],
+                vocabulary: [
+                    { text: "extra time", translation: "дополнительное время" },
+                    { text: "homemade", translation: "домашний" },
+                    { text: "takes effort", translation: "требует усилий" },
+                    { text: "rewarding", translation: "приносящий удовлетворение" },
+                    { text: "in a hurry", translation: "в спешке" },
+                    { text: "quick and reliable", translation: "быстрый и надежный" },
+                    { text: "best balance", translation: "лучший баланс" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "Do you prefer eating at home or going out to restaurants?" },
+                    { speaker: "B", text: "Most of the time, I prefer eating at home. It is healthier, cheaper, and usually more comfortable." },
+                    { speaker: "A", text: "I agree. Going out is nice once in a while, but it adds up quickly." },
+                    { speaker: "B", text: "Exactly. Restaurants are great for a change of pace, but home food just feels more real and dependable." },
+                    { speaker: "A", text: "Also, when you cook at home, you know exactly what went into the meal." },
+                    { speaker: "B", text: "Yes, and that alone makes a big difference." }
+                ],
+                vocabulary: [
+                    { text: "prefer", translation: "предпочитать" },
+                    { text: "eating at home", translation: "есть дома" },
+                    { text: "going out", translation: "ходить куда-то поесть" },
+                    { text: "adds up quickly", translation: "быстро накапливается по сумме" },
+                    { text: "change of pace", translation: "смена обстановки" },
+                    { text: "dependable", translation: "надежный" },
+                    { text: "went into the meal", translation: "вошло в состав блюда" }
+                ]
+            }
+        ]
+    },
+    {
+        id: 9,
+        title: "Shopping",
+        description: "Natural conversations about buying things, comparing options, shopping online or in stores, and making everyday purchase decisions.",
+        examples: [
+            {
+                id: 1,
+                dialogue: [
+                    { speaker: "A", text: "Do you prefer shopping online or going to actual stores?" },
+                    { speaker: "B", text: "These days, mostly online. It saves time, and I can compare prices without driving all over the city." },
+                    { speaker: "A", text: "That is true. The only downside is you cannot really see the quality before it arrives." },
+                    { speaker: "B", text: "Exactly. Sometimes the pictures look great, and then the item shows up looking nothing like you expected." },
+                    { speaker: "A", text: "Yes, online shopping can be convenient, but it can also be a gamble." },
+                    { speaker: "B", text: "That is why I always check reviews before I buy anything expensive." }
+                ],
+                vocabulary: [
+                    { text: "prefer", translation: "предпочитать" },
+                    { text: "actual stores", translation: "настоящие магазины" },
+                    { text: "compare prices", translation: "сравнивать цены" },
+                    { text: "downside", translation: "минус, недостаток" },
+                    { text: "shows up", translation: "приходит, появляется" },
+                    { text: "a gamble", translation: "рискованное дело" },
+                    { text: "check reviews", translation: "проверять отзывы" }
+                ]
+            },
+            {
+                id: 2,
+                dialogue: [
+                    { speaker: "A", text: "Have you bought anything good lately?" },
+                    { speaker: "B", text: "Actually, yes. I found a really good deal on a jacket last weekend." },
+                    { speaker: "A", text: "Nice. Was it one of those lucky finds, or were you specifically looking for it?" },
+                    { speaker: "B", text: "A bit of both. I needed one anyway, but I was not expecting to find something decent at that price." },
+                    { speaker: "A", text: "That is the best kind of shopping - when you buy something useful and do not regret the price afterward." },
+                    { speaker: "B", text: "Exactly. These days, that feels like a small victory." }
+                ],
+                vocabulary: [
+                    { text: "lately", translation: "в последнее время" },
+                    { text: "good deal", translation: "выгодная покупка" },
+                    { text: "lucky find", translation: "удачная находка" },
+                    { text: "specifically looking for", translation: "целенаправленно искал" },
+                    { text: "decent", translation: "приличный, достойный" },
+                    { text: "regret the price", translation: "жалеть о цене" },
+                    { text: "small victory", translation: "маленькая победа" }
+                ]
+            },
+            {
+                id: 3,
+                dialogue: [
+                    { speaker: "A", text: "I need to buy a gift, but I have no idea what to get." },
+                    { speaker: "B", text: "What kind of person is it for?" },
+                    { speaker: "A", text: "A close friend. I want it to feel thoughtful, but not overly expensive." },
+                    { speaker: "B", text: "That makes sense. Sometimes something simple but personal works better than something flashy." },
+                    { speaker: "A", text: "Yes, I was thinking the same. Maybe a good book, something for the home, or something they would actually use." },
+                    { speaker: "B", text: "That sounds like the right direction. A useful gift usually gets appreciated more than a random one." }
+                ],
+                vocabulary: [
+                    { text: "gift", translation: "подарок" },
+                    { text: "thoughtful", translation: "внимательный, продуманный" },
+                    { text: "overly expensive", translation: "слишком дорогой" },
+                    { text: "personal", translation: "личный" },
+                    { text: "flashy", translation: "броский, показной" },
+                    { text: "the right direction", translation: "правильное направление" },
+                    { text: "appreciated", translation: "оцененный" }
+                ]
+            }
+        ]
     }
 ]
 
